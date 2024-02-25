@@ -17,6 +17,7 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cookieParser());
+app.set("trust proxy", 1);
 
 app.use("/api/auth", authRoute);
 app.use("/api/tasks", taskRoute);
